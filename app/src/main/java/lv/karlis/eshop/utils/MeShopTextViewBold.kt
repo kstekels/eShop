@@ -5,7 +5,7 @@ import android.graphics.Typeface
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 
-class MSPTextViewBold(context: Context, attributesSet: AttributeSet) :
+class MeShopTextViewBold(context: Context, attributesSet: AttributeSet) :
     AppCompatTextView(context, attributesSet) {
     init {
         applyFont()
