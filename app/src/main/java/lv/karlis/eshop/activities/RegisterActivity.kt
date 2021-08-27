@@ -6,20 +6,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
-import android.widget.Button
 import android.widget.TextView
 import lv.karlis.eshop.R
 
-class LoginActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var tvRegister: TextView
-
+    private lateinit var tvLogin: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_register)
 
-        tvRegister = findViewById(R.id.tv_register)
+        tvLogin = findViewById(R.id.tv_login)
 
         @Suppress("DEPRECATION")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -31,8 +29,8 @@ class LoginActivity : AppCompatActivity() {
             )
         }
 
-        tvRegister.setOnClickListener{
-            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+        tvLogin.setOnClickListener{
+            val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }
