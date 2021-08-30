@@ -36,7 +36,7 @@ class RegisterActivity : BaseActivity() {
         etLastName = findViewById(R.id.et_last_name)
         etEmail = findViewById(R.id.et_email)
         etPassword = findViewById(R.id.et_password)
-        tilConfirmPassword = findViewById(R.id.til_confirm_password)
+        tilConfirmPassword = findViewById(R.id.et_confirm_password)
         cbTermsAndCondition = findViewById(R.id.cb_terms_and_condition)
         btnRegister = findViewById(R.id.btn_register)
 
@@ -77,31 +77,31 @@ class RegisterActivity : BaseActivity() {
     private fun validateRegisterDetails(): Boolean {
         return when {
             TextUtils.isEmpty(etFirstName.text.toString().trim{ it <= ' ' }) -> {
-                showErrorSnackBar(resources.getString(R.string.err_msg_enter_first_name), true)
+                showErrorSnackBar(resources.getString(R.string.err_msg_enter_first_name), false)
                 false
             }
             TextUtils.isEmpty(etLastName.text.toString().trim{ it <= ' ' }) -> {
-                showErrorSnackBar(resources.getString(R.string.err_msg_enter_last_name), true)
+                showErrorSnackBar(resources.getString(R.string.err_msg_enter_last_name), false)
                 false
             }
             TextUtils.isEmpty(etEmail.text.toString().trim{ it <= ' ' }) -> {
-                showErrorSnackBar(resources.getString(R.string.err_msg_enter_email), true)
+                showErrorSnackBar(resources.getString(R.string.err_msg_enter_email), false)
                 false
             }
             TextUtils.isEmpty(etPassword.text.toString().trim{ it <= ' ' }) -> {
-                showErrorSnackBar(resources.getString(R.string.err_msg_enter_password), true)
+                showErrorSnackBar(resources.getString(R.string.err_msg_enter_password), false)
                 false
             }
             TextUtils.isEmpty(tilConfirmPassword.text.toString().trim{ it <= ' ' }) -> {
-                showErrorSnackBar(resources.getString(R.string.err_msg_enter_confirm_password), true)
+                showErrorSnackBar(resources.getString(R.string.err_msg_enter_confirm_password), false)
                 false
             }
             !cbTermsAndCondition.isChecked -> {
-                showErrorSnackBar(resources.getString(R.string.err_msg_agree_terms_and_condition), true)
+                showErrorSnackBar(resources.getString(R.string.err_msg_agree_terms_and_condition), false)
                 false
             }
             else -> {
-                showErrorSnackBar("Registered successfully!", false)
+                showErrorSnackBar("Registered successfully!", true)
                 true
             }
         }

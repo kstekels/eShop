@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:padding="@dimen/et_padding"
-                    android:textColor="@color/custom_color_text"
+                    android:textColor="@color/custom_color_secondary_text"
                     android:textSize="@dimen/et_textSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:padding="@dimen/et_padding"
-                    android:textColor="@color/custom_color_text"
+                    android:textColor="@color/custom_color_secondary_text"
                     android:textSize="@dimen/et_textSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:padding="@dimen/et_padding"
-                    android:textColor="@color/custom_color_text"
+                    android:textColor="@color/custom_color_secondary_text"
                     android:textSize="@dimen/et_textSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -126,7 +126,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:padding="@dimen/et_padding"
-                    android:textColor="@color/custom_color_text"
+                    android:textColor="@color/custom_color_secondary_text"
                     android:textSize="@dimen/et_textSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -149,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:padding="@dimen/et_padding"
-                    android:textColor="@color/custom_color_text"
+                    android:textColor="@color/custom_color_secondary_text"
                     android:textSize="@dimen/et_textSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
