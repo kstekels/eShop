@@ -3,10 +3,11 @@ package lv.karlis.eshop.utils
 import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
-import androidx.appcompat.widget.AppCompatTextView
+import androidx.appcompat.widget.AppCompatEditText
 
-class MSPTextViewBold(context: Context, attributesSet: AttributeSet) :
-    AppCompatTextView(context, attributesSet) {
+class MeShopEditText(context: Context, attributeSet: AttributeSet) :
+    AppCompatEditText(context, attributeSet) {
+
     init {
         applyFont()
     }
@@ -15,4 +16,5 @@ class MSPTextViewBold(context: Context, attributesSet: AttributeSet) :
         val typeface: Typeface = Typeface.createFromAsset(context.assets, "Montserrat-Bold.ttf")
         setTypeface(typeface)
     }
+
 }

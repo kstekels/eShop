@@ -1,20 +1,25 @@
 package lv.karlis.eshop.activities
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Button
+import android.widget.TextView
 import lv.karlis.eshop.R
 
-@SuppressLint("CustomSplashScreen")
-class SplashActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
+
+    private lateinit var tvRegister: TextView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        setContentView(R.layout.activity_login)
+
+        tvRegister = findViewById(R.id.tv_register)
 
         @Suppress("DEPRECATION")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -26,14 +31,10 @@ class SplashActivity : AppCompatActivity() {
             )
         }
 
-        @Suppress("DEPRECATION")
-        Handler().postDelayed(
-            {
-                startActivity((Intent(this@SplashActivity, LoginActivity::class.java)))
-                finish()
-            },
-            2500
-        )
+        tvRegister.setOnClickListener{
+            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
